@@ -5,7 +5,7 @@
   "main": "emojify.js",
   "private": true,
   "scripts": {
-    "build": "webpack --entry core-js/fn/promise --entry ./emojify.js --config ../loop-development-kit/ldk/goja/dist/webpack/config.js",
+    "build": "webpack --entry core-js/fn/promise --entry ./emojify.js --config ./node_modules/loop-development-kit/ldk/goja/dist/webpack/config.js",
     "build:ldk": "cd node_modules/loop-development-kit/ldk/goja && npm install && npm run build"
   },
   "keywords": [],
