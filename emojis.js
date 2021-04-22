@@ -1,4 +1,4 @@
-export default emojis = {
+const emojis = {
  '+1': 0x1f44d,
  '-1': 0x1f44e,
  '100': 0x1f4af,
@@ -1592,3 +1592,5 @@ export default emojis = {
  'zombie': 0x1f9df,
  'zzz': 0x1f4a4
 };
+
+export default emojis;
