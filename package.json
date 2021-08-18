@@ -6,14 +6,19 @@
   "private": true,
   "scripts": {
     "watch": "npm-watch",
-    "rebuild": "webpack --entry core-js/fn/promise --entry ./emojify.js --config ./node_modules/@oliveai/ldk/dist/webpack/config.js && cp ./dist/loop.js \"$HOME/Library/Application Support/Olive Helps dev/secureloops/e39344a4-285b-4a9b-a522-37a337b594bd_e6530bc8-1521-4344-b509-1f7566182a10_1619108949_local/loop.js\"",
-    "build": "webpack --entry core-js/fn/promise --entry ./emojify.js --config ./node_modules/@oliveai/ldk/dist/webpack/config.js",
-    "build:ldk": "cd node_modules/loop-development-kit/ldk/goja && npm install && npm run build"
+    "rebuild": "webpack --entry ./emojify.js --config ./node_modules/@oliveai/ldk/dist/webpack/config.js && cp ./dist/loop.js \"$HOME/Library/Application Support/Olive Helps dev/secureloops/e39344a4-285b-4a9b-a522-37a337b594bd_e6530bc8-1521-4344-b509-1f7566182a10_1619108949_local/loop.js\"",
+    "build": "webpack --entry ./emojify.js --config ./node_modules/@oliveai/ldk/dist/webpack/config.js"
   },
   "watch": {
     "rebuild": {
       "patterns": "{emojify,emojis}.js",
       "runOnChangeOnly": true
+    }
+  },
+  "ldk": {
+    "permissions": {
+      "clipboard": {},
+      "whisper": {}
     }
   },
   "keywords": [],
@@ -24,7 +29,7 @@
     "@babel/plugin-transform-destructuring": "^7.13.0",
     "@babel/plugin-transform-runtime": "^7.13.15",
     "@babel/preset-env": "^7.13.15",
-    "@oliveai/ldk": "file:../loop-development-kit/ldk/goja/",
+    "@oliveai/ldk": "^3.1.0",
     "babel-loader": "^8.2.2",
     "core-js": "^2.6.12",
     "npm-watch": "^0.9.0",
